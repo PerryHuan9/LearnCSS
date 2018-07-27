@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试CSS3 text</title>
+    <!--CSS3新增text的属性
+        1.text-shadow 使文本形成阴影
+        2.word-wrap 可设置单词过长一行容不下的处理方法 break-word break-space
+        3.word-break 单词过长拆分规则 keep-all break-all
+        4.textover-flow 设置文本溢出要如何显示
+    -->
+    
+    <style>
+        h2{
+            text-shadow: 5px 5px 5px #ff0000;
+        }
+        
+        div:nth-child(2){
+            word-wrap: break-word;
+        }
+        
+        div:nth-child(3){
+            word-break: keep-all;
+        }
+        
+        div:nth-child(4){
+            word-break: break-all;
+        }
+        
+    </style>
+    
+    
+</head>
+<body>
+    
+    <h2>Text-shadow effect</h2>
+    
+    <div style="width: 100px;border: 1px solid red">
+        My name is akdnjkadjkadbajdbjakdnnjkanjakndjkandkjadnjkadndkkdalndfjkadn. Are you OK ?
+    </div>
+    
+    <div style="width: 200px;border: 1px solid red;margin: 30px">
+        My name is akdnjkadjkadbajdbjakdakn.
+    </div>
+    
+    <div style="width: 200px;border: 1px solid red;margin: 30px">
+        My name is akdnjkadjkadbajdbjakdnnjkanjakn.
+    </div>
+    
+    
+    
+</body>
+</html>

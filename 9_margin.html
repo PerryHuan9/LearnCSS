@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试margin合并现象</title>
+    <!--外边距合并是指当两个垂直外边距相遇时，它们将形成一个外边距，并且外边距大值的起作用-->
+    <!--当一个元素包含在另一个元素中时（假如没有内边距或边框把外边距隔离开，它们的上下也会发生合并(叠加)）-->
+    <!--对以下两个div 上下间隔将会是80px-->
+    
+    <style>
+       body>p{
+            width: 200px;
+            height: 200px;
+        }
+        
+        #p1{
+            background: red;
+            margin: 50px;
+        }
+        
+        #p2{
+            background: green;
+            margin: 80px;
+        }
+        
+        
+        
+        
+        
+        
+        
+    </style>
+    
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    
+    <div>
+        abasjhbajsd <!--这一行将会变成无名块 框-->
+        <p>nishi andjaads</p>
+        ajkdfnajkdnkjd
+    </div>
+    
+    <div style="margin-top: 20px ;background: green;width: 200px;height: 200px">
+        
+        <p style="margin-top: 40px;background: blue;width: 100px;height: 100px;" >
+        
+        </p>
+    
+    </div>
+    <b style="margin: 50px;padding: 50px;border: 30px solid red">
+        你好啊
+    </b>
+    <i>你好的</i>
+    <span>天高任鸟飞，海阔凭鱼跃</span>
+    
+    
+    
+    
+</body>
+</html>

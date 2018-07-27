@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试CSS3 渐变gradients</title>
+    <!--CSS3 渐变有
+        1.Linear Gradients （线性渐变）向下/向上/向左/向右/对角方向
+        用法：background:linear-gradient(direction(默认从上到下),color-stop1,color-stop2,...)
+        如果涉及透明度的渐变可用rgba（）设置颜色
+        2.repeating-linear-gradient() 重复线性渐变
+        
+        3.Radial Gradients(径向渐变) 由它们的中心定义
+        为了创建一个径向渐变，你也必须至少定义两种颜色结点。颜色结点即你想要呈现平稳过渡的颜色。
+        同时，你也可以指定渐变的中心、形状（圆形或椭圆形）、大小。
+        默认情况下，渐变的中心是 center（表示在中心点），渐变的形状是 ellipse（表示椭圆形），
+        渐变的大小是 farthest-corner（表示到最远的角落）。
+        
+    -->
+    <style>
+        div {
+            color: white;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            margin: 20px auto;
+            border: 1px solid black;
+        }
+        
+        #div1 {
+            background: linear-gradient(to bottom, red, blue);
+        }
+        
+        #div2 {
+            /*从左上角到右下角渐变*/
+            background: linear-gradient(to bottom right, red, yellow, green);
+        }
+        
+        #div3 {
+            /*使用角度，90deg表示从左到右*/
+            background: linear-gradient(90deg, brown, chartreuse);
+        }
+        
+        #div4 {
+            /*180deg 表示从上到下*/
+            background: linear-gradient(180deg, brown, black);
+        }
+        
+        #div5 {
+            /*-90deg表示从右到左*/
+            background: linear-gradient(-90deg, aqua, sienna);
+        }
+        
+        #div6 {
+            /*设置为38deg*/
+            background: linear-gradient(38deg, cadetblue, coral);
+        }
+        
+        #div7{
+            background: radial-gradient(red,yellow,blue);
+        }
+        
+        #div8{
+            background: radial-gradient(ellipse,red,rebeccapurple,rosybrown);
+        }
+        
+        #div9{
+            /*颜色结点不均匀分布*/
+           background: radial-gradient(black 20%,bisque 30%,olivedrab 50%);
+        }
+        
+        #div10{
+            background: radial-gradient(50% 50%,blue,green);
+           
+        }
+        #div11{
+            background: radial-gradient(blue 20%,green 50% );
+        }
+    
+    
+    </style>
+
+
+</head>
+<body>
+    <div id="div1">
+        由上而下渐变
+    </div>
+    <div id="div2">
+        从左上角到右下角渐变
+    </div>
+    
+    <div id="div3">90deg</div>
+    <div id="div4">180deg</div>
+    <div id="div5">-90deg</div>
+    <div id="div6">38deg</div>
+    <div id="div7">圆型径向渐变</div>
+    <div id="div8">椭圆型径向渐变</div>
+    <div id="div9">各颜色占据的比例不同，不均匀</div>
+    <div id="div10">圆型径向渐变</div>
+    <div id="div11">圆型径向渐变</div>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试CSS table</title>
+    <!--table的CSS 属性
+        1.border
+        2.boredr-collapse
+        3.width和height
+        4.text-align和vertical-align
+        5.border-spacing 设置分割单元边框的距离
+        6.caption-side 设置标题的位置
+        7.empth-cells 设置是否显示表格中的空单元格
+        8.table-layout  设置宽的比例算法 automatic 或fixed
+    
+    -->
+    
+    <style>
+        table{
+            border: 1px solid red;
+            /*border-collapse: collapse;*/
+            border-spacing: 10px;
+            caption-side: bottom;
+            empty-cells: hide;
+            
+        }
+        td{
+            border: 1px solid red;
+           
+        }
+        
+    </style>
+
+</head>
+<body>
+    <table>
+        <caption>title</caption>
+        <tr>
+            <td>第一列</td>
+            <td>第二列</td>
+            <td>第三列</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>d</td>
+            <td>d</td>
+            <td>d</td>
+        </tr>
+    
+    </table>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试CSS3 background</title>
+    <!--CSS3新增了两个关于背景的属性：
+        1.background-size用来设置图片的大小 可以将图片拉伸
+        2.background-origin 规定背景图片的定位区域
+        3.多重背景图片， 为background-image设置多个背景图片
+    
+    
+    -->
+    <style>
+        div:first-child {
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            line-height: 10;
+            padding: 50px;
+            margin: 50px auto ;
+            background:url("../img/alien4.png"), url("../img/banana.jpg") ;
+            background-repeat: no-repeat no-repeat;
+            background-position:center;
+            border: 40px solid red;
+            background-size: 20px 20px,100% 100%;
+            /*设置background-position定位的起始点*/
+            background-origin: padding-box;
+            
+        }
+    
+    </style>
+
+
+</head>
+<body>
+    <div>
+        我用background来调整图片的大小
+    
+    </div>
+
+
+</body>
+</html>

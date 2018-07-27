@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试CSS position属性</title>
+    <!--CSS有三种定位机制：普通流、浮动、绝对定位，其由position属性设置
+         static     元素框正常生成，块级元素生成一个矩形框，行内元素则会创建一个或多个行框，均置于文档流中
+         relative   元素框偏移某个距离（设置left等）。元素仍保持其未定位前的形状，它原本所占的空间保留(保留的是未曾定位的)
+         absolute   元素框从文档流中完全删除，并相对于其最近的已定位祖先元素定位，若没有则基于最初的包含块，
+                    其所占的空间将会被关闭
+         fixed      脱离文档流元素框相对浏览器视窗定位(不会随着文档滚动)
+    
+    -->
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background: blue;
+            margin: 50px auto;
+        }
+        
+        /*使img2的父元素实现定位，则img2基于div2定位*/
+        #div2 {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background: red;
+        }
+        
+        .img1 {
+            position: relative;
+            left: 20px;
+            top: 30px;
+        }
+        
+        .img2 {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+        }
+        
+        .img3 {
+            position: fixed;
+            left: 20px;
+            top: 30px;
+        }
+        
+        p {
+            width: 200px;
+            /*溢出则设置为可滚动查看*/
+            overflow: scroll;
+        }
+    
+    
+    </style>
+
+
+</head>
+<body>
+    
+    <div>
+        <img class="img1" src="img/alien4.png" alt="picture not found">
+        <b>ABCDEFGHIJKLMNOPQRSTUVWSYZ</b>
+    
+    </div>
+    
+    
+    <div id="div2">
+        <div>
+            <img class="img2" src="img/alien4.png" alt="picture not found">
+            <b>ABCDEFGHIJKLMNOPQRSTUVWSYZ</b>
+        </div>
+    </div>
+    <p>
+        abdabjhabjabcjhabvcjhabcvjhabcjkabbjcj打底裤bvjhacjhacac ja cjhacjhacjachajahuyafbabfiabfafnknfkajfbjsfbajbfjakb
+        jkabfjkabfafaKJFNJbjhfb阿达的BFjfbakfdnajfnjkasdfnjaskfns年后jdfnjksafnsjkfnjkasnfjksnafjkasnfjknaksjfnkasnfknafkjja
+    </p>
+    
+    <div>
+        <img class="img3" src="img/alien4.png" alt="picture not found">
+        <b>ABCDEFGHIJKLMNOPQRSTUVWSYZ</b>
+    
+    </div>
+
+
+</body>
+</html>

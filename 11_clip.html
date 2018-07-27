@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试剪切图片</title>
+    <!--在设置position为absolute前提下，clip属性可将图片剪切-->
+    <!--在设置position为absolute前提下，z-index值越小，元素越在底层-->
+    
+    
+    <style>
+        .div1 img {
+            width: 400px;
+        }
+        
+        .img1 {
+            position: absolute;
+            /*四值分别为上右下作的位置*/
+            clip: rect(0, 200px, 400px, 0px);
+            
+        }
+        
+        .div2 p:first-child img {
+            vertical-align: text-top;
+        }
+        
+        .div2 p:nth-child(2) img {
+            vertical-align: text-bottom;
+        }
+        
+        .div3 img:first-child{
+            position: absolute;
+            z-index: -1;
+        }
+        
+        .div4 img{
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .div4 h1{
+            position: absolute;
+            z-index: 2;
+        }
+    
+    
+    </style>
+
+</head>
+<body>
+    
+    <div class="div1">
+        <img src="img/cherry.jpg" alt="not found">
+        <em>我是一只小小鸟，飞呀飞，怎么都飞不高</em>
+        <img class="img1" src="img/cherry.jpg" alt="not found">
+    </div>
+    
+    
+    <div class="div2">
+        <p>这是一幅 <img src="img/eg_cute.gif" alt="">位于段落中的图像</p>
+        <p>这是一幅 <img src="img/eg_cute.gif" alt="">位于段落中的图像</p>
+    </div>
+    
+    <div class="div3">
+        <img src="img/eg_mouse.jpg" alt="">
+        <h1>我是标题</h1>
+        <p>老鼠爱大米</p>
+        
+    </div>
+    <div class="div4">
+        <h2>天真真好 </h2>
+        <img src="img/eg_mouse.jpg" alt="">
+        <h1>我是标题啊大大阿法士大夫</h1>
+        <p>老鼠爱大发沙发斯蒂芬法法米</p>
+        
+    </div>
+
+
+</body>
+</html>

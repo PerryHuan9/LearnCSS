@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试CSS3 border</title>
+    <!--CSS3新增了三个border的属性
+      1.border-radius 设置边框的弧度
+      2.box-shadow 边框的阴影 接收六个值offset-x offset-y blur(模糊度) 可用来实现卡片效果
+       spread（阴影的大小，默认0和元素一样大） color position（内部阴影或外部）
+      3.border-image  边框图片
+        
+    -->
+    <style>
+        .p1{
+            width: 200px;
+            margin: 30px auto;
+            text-align: center;
+            border: 1px solid blue;
+            border-radius: 50px;
+            box-shadow: 10px 10px 5px 5px #888888 ;
+            
+        }
+        
+        .p2{
+            width: 300px;
+            margin: 50px auto;
+            padding: 10px 20px;
+            border: 20px solid transparent;
+            border-image: url("../img/border2.png") 30 fill  round;
+            /*border-image-source: url("../img/border2.png");*/
+            /*!*将边框图片按九宫格切割为九块，slice的四个值便是设置用来切割的四条线到图片变框的距离*!*/
+            /*!*如果再加入一个fill参数，中间那部分将会作为背景加入*!*/
+            /*border-image-slice: 30 fill;*/
+            /*!*设定边框的宽度*!*/
+            /*border-image-width:1;*/
+            /*!*设置边框是平铺（reapeat）、铺满（round）、拉伸（stretch）*!*/
+            border-image-repeat: round;
+            
+            
+        }
+        
+    </style>
+    
+    
+    
+</head>
+<body>
+    
+    <p class="p1">这个边框有圆角</p>
+    
+    <p class="p2">你好啊,朋友</p>
+    <br>
+    <img src="../img/border2.png" alt="">
+    
+    
+    
+</body>
+</html>

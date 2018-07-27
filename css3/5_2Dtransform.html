@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试CSS3 2D transform</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            margin: 80px auto;
+            background: green;
+        }
+        
+        #translate{
+            /*将元素从原始位置移到(100px,50px)的位置*/
+            transform: translate(100px ,50px);
+        }
+        
+        #rotate{
+            /*将元素旋转30deg*/
+            background: red;
+            transform: rotate(30deg);
+        }
+        #scale{
+            /*将元素增大或缩小一定的倍数*/
+            background: olivedrab;
+            transform: scale(2,.5);
+            
+        }
+        #skew{
+            /*元素的X轴旋转-30deg，y轴旋转-20deg*/
+            background: black;
+            transform: skew(-30deg,-20deg);
+        }
+        
+        #matrix{
+            /*以上所有的2D变换操作都可以使用matrix 实现*/
+            /*实现平移效果*/
+            background: green;
+            transform: matrix(1,0,0,1,100,50);
+            
+        }
+        
+        #test:hover{
+            transform: rotate(180deg);
+            transition: 2s;
+        }
+        
+        #test{
+            transition: 2s;
+        }
+        
+        
+        
+    </style>
+    
+    
+    
+</head>
+<body>
+    <div id="translate"></div>
+    <div id="rotate"></div>
+    <div id="scale"></div>
+    <div id="skew"></div>
+    <div id="matrix"></div>
+    <div id="test">ajdbanjkdad</div>
+    
+    
+</body>
+</html>
